@@ -86,7 +86,7 @@ Frequency_Considered_Max_Index=find(Frequency>Frequency_Considered_Max,1,'first'
 % Time-domain
 
 Time_total=1/(Max_Frequency/(N_f-1));
-Time=[0:Time_total/(N_t-1):Time_total]/2;%/2¨O¶]¨∞§@®”§@¶^
+Time=[0:Time_total/(N_t-1):Time_total]/2;%/2ÊòØÂõ†ÁÇ∫‰∏Ä‰æÜ‰∏ÄÂõû
 Time=Time';
 Position=c*Time;
 Position_micron=Position*1E6;
@@ -243,7 +243,7 @@ Spectrum_Reference=Spectrum_Sample_1(:,array_number_ref);
  
 
 Spectrum_Sample_1=Spectrum_Sample_1(:,1:Active_Array_Size);
-Spectrum_Sample_2=Spectrum_Sample_2(:,1:Active_Array_Size);   %!!!!!!!!!! ¶]¨∞±µ§U®”¥N≠n∫‚n k §F, ß‚®S¶≥®‚≠”§∂≠±™∫©Ò∂i®”±°™p∑|´‹©«
+Spectrum_Sample_2=Spectrum_Sample_2(:,1:Active_Array_Size);   %!!!!!!!!!! Âõ†ÁÇ∫Êé•‰∏ã‰æÜÂ∞±Ë¶ÅÁÆón k ‰∫Ü, ÊääÊ≤íÊúâÂÖ©ÂÄã‰ªãÈù¢ÁöÑÊîæÈÄ≤‰æÜÊÉÖÊ≥ÅÊúÉÂæàÊÄ™
 
 Spectrum_Devided=Spectrum_Sample_1./repmat(Spectrum_Reference,1,Active_Array_Size);
 Spectrum_Devided_2=Spectrum_Sample_2./repmat(Spectrum_Reference,1,Active_Array_Size);
@@ -324,7 +324,7 @@ det_array = @ (Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9) Q1.*Q5.*Q9 + Q2.*Q6.*Q7 + Q3.*Q4.*Q8 
                     
                     %A = @ (n,Thickness_Now,Ratio_Lower2Upper_Now) Ratio_Lower2Upper_Now./r1(n).*(t1(n).*t1_r(n).*r2(n).*exp(i*4*pi.*Frequency_Considered.*n.*Thickness_Now/c)./(1-r1_r(n).*r2(n).*exp(i*4*pi*Frequency_Considered.*n.*Thickness_Now/c)));                    
                     %T_abs= @ (n,Thickness_Now) abs((2.*n2_Considered./(n2_Considered+n1_Considered)).*(2*n1_Considered./(n+n1_Considered)).*(2*n./(n+n2_Considered)).*exp(i*2*pi.*Frequency_Considered/c.*n.*Thickness_Now)./(1-((n-n1_Considered)./(n+n1_Considered)).*((n-n2_Considered)./(n+n2_Considered)).*exp(i*4*pi.*Frequency_Considered/c.*n.*Thickness_Now))).^2;
-T_abs = @ (n,Thickness_Now) abs(t_AN100_Considered.*t1(n).*t2(n).*exp(1i*2*pi*Frequency_Considered.*n.*Thickness_Now/c)./(1-r1_r(n).*r2(n).*exp(1i*4*pi*Frequency_Considered.*n.*Thickness_Now/c))).^2;          %Note, 120827 remove 2 from §¿§l4*pi > 2*pi
+T_abs = @ (n,Thickness_Now) abs(t_AN100_Considered.*t1(n).*t2(n).*exp(1i*2*pi*Frequency_Considered.*n.*Thickness_Now/c)./(1-r1_r(n).*r2(n).*exp(1i*4*pi*Frequency_Considered.*n.*Thickness_Now/c))).^2;          %Note, 120827 remove 2 from ÂàÜÂ≠ê4*pi > 2*pi
                     
 dn=1E-10;
 dt=1E-16;
@@ -455,9 +455,9 @@ plot(Wavelength_micron_Considered,T_Best,Wavelength_micron_Considered,T_Consider
 %t2_Best=2*(n_Best)./(n_Best+n2);
 %t2_r_Best=2*(n2)./(n_Best+n2);
 %r2_Best=((n_Best)-n2)./((n_Best)+n2);   
-%d_Best=exp(1i*2*pi.*Frequency_Considered/c.*(n_Best).*Thickness_Best);   %™`∑N! -1*n!
+%d_Best=exp(1i*2*pi.*Frequency_Considered/c.*(n_Best).*Thickness_Best);   %Ê≥®ÊÑè! -1*n!
     %d0_Best=exp(i*2*pi.*Frequency/c.*(Distance_fit(j)-Thickness_Now));
-    %%™`∑N! -1*n!
+    %%Ê≥®ÊÑè! -1*n!
 %Spectrum_Reference_Considered=Spectrum_Reference(Frequency_Considered_Min_Index:Frequency_Considered_Max_Index);
 %Spectrum_Sample_Considered=Spectrum_Sample(Frequency_Considered_Min_Index:Frequency_Considered_Max_Index);
 %Spectrum_Upper_Temp_Best=(exp(i*4*pi.*Frequency_Considered/c.*(Ratio_Lower2Upper_Best))./r_BK7_Considered./Ratio_Upper2Reference_Best) .* (Position_Upper2Reference_Best.*(n1_Considered-n_Best)./(n1_Considered+n_Best));
